@@ -1,0 +1,114 @@
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.container {
+  padding: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 12px 0;
+  color: #777;
+  font-size: 16px;
+}
+
+.text-display {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 4px 6px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 360px;
+}
+
+.faded-default {
+  opacity: 0.4;
+}
+
+.text-input {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+}
+
+.text-input:focus {
+  outline: none;
+}
+
+hr {
+  margin-top: 8px;
+}
+
+.section {
+  margin: 26px 0;
+  padding: 0;
+}
+
+.section > h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 10px;
+  letter-spacing: -0.2px;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.delete-btn {
+  background: #ac2e2e;
+  border: 1px solid #d1d5db;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.delete-btn:hover {
+  background: #832323;
+  border-color: #c5c9d0;
+}
+
+.section > button {
+  margin-top: 6px;
+  padding: 6px 12px;
+  background: #2eac34;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.section > button:hover {
+  background: #228127;
+}
+
+.section hr {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
