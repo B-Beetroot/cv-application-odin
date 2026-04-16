@@ -42,7 +42,9 @@ export default function EditableFieldList({
         </div>
       ))}
 
-      <button onClick={addItem}>Add {title}</button>
+      <button className="add-btn" onClick={addItem}>
+        Add {title}
+      </button>
       <hr />
     </div>
   );

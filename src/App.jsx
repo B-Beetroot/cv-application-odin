@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import EditableFieldList from "./components/EditableFieldList";
 
 function App() {
+  const [hideButtons, setHideButtons] = useState(false);
   const [personalInfo, setPersonalInfo] = useState([
     { value: "Your Name", placeholder: "Your Name" },
     { value: "E-Mail", placeholder: "E-Mail" },
@@ -20,8 +21,15 @@ function App() {
   ]);
 
   return (
-    <div className="app-wrapper">
+    <div className={`app-wrapper ${hideButtons ? "hide-buttons" : ""}`}>
       <Header />
+
+      <button
+        className="hide-btn"
+        onClick={() => setHideButtons((prev) => !prev)}
+      >
+        {hideButtons ? "Edit CV" : "Preview CV"}
+      </button>
 
       <div className="container">
         <EditableFieldList

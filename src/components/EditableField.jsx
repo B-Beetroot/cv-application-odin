@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-export default function EditableField({ value, setValue, placeholder }) {
+export default function EditableField({
+  value,
+  setValue,
+  placeholder,
+  className,
+}) {
   const [editing, setEditing] = useState(false);
 
   const finishEditing = () => {
@@ -11,29 +16,33 @@ export default function EditableField({ value, setValue, placeholder }) {
   };
 
   return (
-    <>
+    <div className={className}>
       {!editing ? (
-        <h1
-          className={`text-display ${value === placeholder ? "faded-default" : ""}`}
-          onClick={() => {
-            setEditing(true);
-            if (value === placeholder) {
-              setValue("");
-            }
-          }}
-        >
-          {value}
-        </h1>
+        <>
+          <h1
+            className={`text-display ${value === placeholder ? "faded-default" : ""}`}
+          >
+            {value}
+          </h1>
+
+          <button className="edit-btn" onClick={() => setEditing(true)}>
+            Edit
+          </button>
+        </>
       ) : (
-        <input
-          autoFocus
-          className="text-input"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          onBlur={finishEditing}
-          onKeyDown={(e) => e.key === "Enter" && finishEditing()}
-        />
+        <>
+          <input
+            autoFocus
+            className="text-input"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          />
+
+          <button className="submit-btn" onClick={finishEditing}>
+            Submit
+          </button>
+        </>
       )}
-    </>
+    </div>
   );
 }

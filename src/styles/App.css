@@ -2,6 +2,49 @@
   display: flex;
   flex-direction: column;
   margin: 0;
+  background-color: #e6e6e6;
+  padding: 10px;
+}
+
+.hide-buttons .edit-btn,
+.hide-buttons .delete-btn,
+.hide-buttons .add-btn {
+  display: none;
+}
+
+.hide-btn {
+  width: 200px;
+  margin-top: 6px;
+  padding: 6px 12px;
+  background: #2e5aac;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.hide-btn:hover {
+  background: #1d396d;
+}
+
+.edit-btn,
+.submit-btn {
+  margin-top: 6px;
+  padding: 6px 12px;
+  background: #2e5aac;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.edit-btn:hover,
+.submit-btn:hover {
+  background: #1d396d;
 }
 
 .container {
@@ -18,7 +61,6 @@
 }
 
 .text-display {
-  cursor: pointer;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.2;
@@ -49,10 +91,6 @@
   outline: none;
 }
 
-hr {
-  margin-top: 8px;
-}
-
 .section {
   margin: 26px 0;
   padding: 0;
@@ -74,6 +112,7 @@ hr {
 }
 
 .delete-btn {
+  margin-left: auto;
   background: #ac2e2e;
   border: 1px solid #d1d5db;
   color: white;
@@ -110,5 +149,5 @@ hr {
 .section hr {
   margin: 16px 0;
   border: none;
-  border-top: 1px solid #e5e7eb;
+  border-top: 2px solid #585858;
 }
